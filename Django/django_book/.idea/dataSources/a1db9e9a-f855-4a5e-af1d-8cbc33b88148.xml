@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="2006test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="2006test">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="2006test_django"/>
+    <schema id="4" parent="1" name="bbs"/>
+    <schema id="5" parent="1" name="book"/>
+    <schema id="6" parent="1" name="bookmanager"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="login"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="student"/>
+    <schema id="11" parent="1" name="test"/>
+    <schema id="12" parent="1" name="user"/>
+    <table id="13" parent="2" name="django_migrations"/>
+    <table id="14" parent="2" name="t_book"/>
+    <table id="15" parent="2" name="t_emp"/>
+    <column id="16" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="17" parent="13" name="app">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="18" parent="13" name="name">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="19" parent="13" name="applied">
+      <Position>4</Position>
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <key id="20" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="14" name="t_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="14" name="t_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="23" parent="14" name="t_price">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="24" parent="14" name="t_type">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="25" parent="14" name="t_publisher">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="26" parent="14" name="t_date">
+      <Position>6</Position>
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="27" parent="14" name="t_updown">
+      <Position>7</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="28" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="15" name="t_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="15" name="t_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="31" parent="15" name="t_age">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="32" parent="15" name="t_sex">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="33" parent="15" name="t_date">
+      <Position>5</Position>
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <column id="34" parent="15" name="t_hobby">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="35" parent="15" name="t_address">
+      <Position>7</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="36" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

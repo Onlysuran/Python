@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>图书编号</th>
+        <th>图书名称</th>
+        <th>图书价格</th>
+        <th>图书类型</th>
+        <th>图书出版社</th>
+        <th>图书出版日期</th>
+        <th>图书是否上架</th>
+        <th>操作</th>
+        <th><a href="/to_add/">新增图书+</a></th>
+    </tr>
+    {% for i in book_add %}
+    <tr>
+        <td>{{ i.t_id }}</td>
+        <td>{{ i.t_name }}</td>
+        <td>{{ i.t_price }}</td>
+        <td>
+            {% if '1' in i.t_type %}
+                历史类
+            {% endif %}
+            {% if '2' in i.t_type %}
+                小说类
+            {% endif %}
+            {% if '3' in i.t_type %}
+                言情类
+            {% endif %}
+            {% if '4' in i.t_type %}
+                玄幻类
+            {% endif %}
+        </td>
+        <td>
+            {% if i.t_publisher == '1' %}
+                新华出版社
+            {% elif i.t_publisher == '2' %}
+                清华出版社
+            {% elif i.t_publisher == '3' %}
+                北大出版社
+            {% endif %}
+        </td>
+        <td>{{ i.t_date | date:'Y-m-d'}}</td>
+        <td>
+            {% if i.t_updown == '1' %}
+                上架
+            {% else %}
+                未上架
+            {% endif %}
+        </td>
+        <td>
+            <a href="/book_dele/?id={{ i.t_id }}">删除</a>
+            <a href="/to_put/?id={{ i.t_id }}">修改</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

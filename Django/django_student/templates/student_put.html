@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增学生页面</title>
+</head>
+<body onload="put()">
+<form action="/student_put/" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="t_id" value="{{ student.t_id }}">
+    学生姓名：<input type="text" name="t_name" value="{{ student.t_name }}"><br>
+    学生年龄：<input type="text" name="t_age" value="{{ student.t_age }}"><br>
+    学生性别：<input type="radio" name="t_sex" value="1">男
+            <input type="radio" name="t_sex" value="0">女
+    <br>
+    学生籍贯：<select name="t_address" id="t_address">
+                    <option value="0">请选择</option>
+                    <option value="1">北京</option>
+                    <option value="2">上海</option>
+                    <option value="3">杭州</option>
+            </select>
+    <br>
+    学生爱好：<input type="checkbox" name="t_hobby" value="1">学习
+            <input type="checkbox" name="t_hobby" value="2">打代码
+            <input type="checkbox" name="t_hobby" value="3">跑步
+            <input type="checkbox" name="t_hobby" value="4">打篮球
+    <br>
+    出生日期：<input type="date" name="t_date" value="{{ student.t_date | date:'Y-m-d' }}">
+    <br>
+    <button>提交</button>
+</form>
+</body>
+<script>
+    function put() {
+            //单选按钮
+            var sex_arr = document.getElementsByName('t_sex')
+            for ( var i = 0; i < sex_arr.length;i++){
+                if ( sex_arr[i].value == "{{ student.t_sex }}"){
+                    sex_arr[i].checked = true
+                }
+            }
+
+            //下拉列表
+            var address_arr = document.getElementById("t_address").options
+            for ( var i = 0; i < address_arr.length; i++){
+                if ( address_arr[i].value == "{{ student.t_address }}"){
+                    address_arr[i].selected = true
+                }
+            }
+
+            //复选框
+            var hobby_arr = document.getElementsByName("t_hobby")
+            var str = "{{ student.t_hobby }}"
+            for ( var i = 0 ;i < hobby_arr.length ;i++){
+                if ( str.indexOf(hobby_arr[i].value) != -1){
+                    hobby_arr[i].checked = true
+                }
+            }
+
+    }
+</script>
+</html>

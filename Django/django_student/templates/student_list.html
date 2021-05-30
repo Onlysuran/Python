@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息列表</title>
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+<table align="center" class="table table-bordered table-hover">
+<h2 align="center" class="">学生信息列表</h2>
+<thead>
+    <tr>
+        <th>学生编号</th>
+        <th>学生姓名</th>
+        <th>学生年龄</th>
+        <th>学生性别</th>
+        <th>学生籍贯</th>
+        <th>学生爱好</th>
+        <th>出生日期</th>
+        <th>操作</th>
+        <th><a href="/to_add/">新增学生+</a></th>
+    </tr>
+</thead>
+<tbody>
+    {% for i in student_all %}
+    <tr>
+        <td>{{ i.t_id }}</td>
+        <td>{{ i.t_name }}</td>
+        <td>{{ i.t_age }}</td>
+        <td>
+            {% if i.t_sex == '1' %}
+                男
+            {% elif i.t_sex == '0' %}
+                女
+            {% endif %}
+        </td>
+        <td>
+            {% if i.t_address == '1' %}
+                北京
+            {% elif i.t_address == '2' %}
+                上海
+            {% elif i.t_address == '3' %}
+                杭州
+            {% endif %}
+        </td>
+        <td>
+            {% if '1' in i.t_hobby %}
+                学习
+            {% endif %}
+            {% if '2' in i.t_hobby %}
+                打代码
+            {% endif %}
+            {% if '3' in i.t_hobby %}
+                跑步
+            {% endif %}
+            {% if '4' in i.t_hobby %}
+                打篮球
+            {% endif %}
+        </td>
+        <td>
+            {{ i.t_date | date:'Y-m-d' }}
+        </td>
+        <td>
+            <a class="btn btn-danger btn-sm" href="/student_dele/?id={{ i.t_id }}">删除</a>
+            <a class="btn btn-primary btn-sm" href="/to_put/?id={{ i.t_id }}">修改</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</tbody>
+</table>
+</body>
+</html>

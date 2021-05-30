@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="2006test_django@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="2006test"/>
+    <schema id="3" parent="1" name="2006test_django">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="1" name="bbs"/>
+    <schema id="5" parent="1" name="book"/>
+    <schema id="6" parent="1" name="bookmanager"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="login"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="student"/>
+    <schema id="11" parent="1" name="test"/>
+    <schema id="12" parent="1" name="user"/>
+    <table id="13" parent="3" name="django_migrations"/>
+    <table id="14" parent="3" name="t_book"/>
+    <table id="15" parent="3" name="t_car"/>
+    <table id="16" parent="3" name="t_emp"/>
+    <table id="17" parent="3" name="t_goods"/>
+    <table id="18" parent="3" name="t_student"/>
+    <table id="19" parent="3" name="t_teacher"/>
+    <table id="20" parent="3" name="t_user"/>
+    <column id="21" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="13" name="app">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="13" name="name">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="24" parent="13" name="applied">
+      <Position>4</Position>
+      <DataType>DATETIME(19)|93</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <key id="25" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="14" name="t_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="14" name="t_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="28" parent="14" name="t_price">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="29" parent="14" name="t_type">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="30" parent="14" name="t_updown">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="31" parent="14" name="t_publisher">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="32" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="15" name="t_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="15" name="t_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="35" parent="15" name="t_price">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="36" parent="15" name="t_type">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="37" parent="15" name="t_updown">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="38" parent="15" name="t_address">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="39" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="16" name="e_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="16" name="e_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="42" parent="16" name="e_age">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="43" parent="16" name="e_sex">
+      <Position>4</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="44" parent="16" name="e_address">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="45" parent="16" name="e_hobby">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="46" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>e_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="17" name="g_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="17" name="g_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(32)|12</DataType>
+    </column>
+    <column id="49" parent="17" name="g_type">
+      <Position>3</Position>
+      <DataType>VARCHAR(32)|12</DataType>
+    </column>
+    <column id="50" parent="17" name="g_price">
+      <Position>4</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="51" parent="17" name="g_hot">
+      <Position>5</Position>
+      <DataType>VARCHAR(32)|12</DataType>
+    </column>
+    <column id="52" parent="17" name="g_count">
+      <Position>6</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="53" parent="17" name="g_updown">
+      <Position>7</Position>
+      <DataType>VARCHAR(32)|12</DataType>
+    </column>
+    <key id="54" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>g_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="18" name="t_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="56" parent="18" name="t_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="57" parent="18" name="t_age">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="58" parent="18" name="t_sex">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="59" parent="18" name="t_address">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="60" parent="18" name="t_hobby">
+      <Position>6</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="61" parent="18" name="t_date">
+      <Position>7</Position>
+      <DataType>DATE(10)|91</DataType>
+    </column>
+    <key id="62" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>t_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="64" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="65" parent="19" name="age">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="66" parent="19" name="sex">
+      <Position>4</Position>
+      <DataType>VARCHAR(10)|12</DataType>
+    </column>
+    <column id="67" parent="19" name="address">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="68" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="20" name="u_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="70" parent="20" name="u_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="71" parent="20" name="u_age">
+      <Position>3</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="72" parent="20" name="u_sex">
+      <Position>4</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <column id="73" parent="20" name="u_address">
+      <Position>5</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="74" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>u_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

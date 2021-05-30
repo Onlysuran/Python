@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="put()">
+<form action="/book_put/" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="t_id" value="{{ book.t_id }}">
+    图书名称：<input type="text" name="t_name" value="{{ book.t_name }}"><br>
+    图书价格：<input type="text" name="t_price" value="{{ book.t_price }}"><br>
+    图书类型：<input type="checkbox" name="t_type" value="1">历史类
+           <input type="checkbox" name="t_type" value="2">小说类
+           <input type="checkbox" name="t_type" value="3">言情类
+           <input type="checkbox" name="t_type" value="4">玄幻类
+    <br>
+    图书出版社：<select name="t_publisher" id="t_publisher">
+                <option value="0">请选择</option>
+                <option value="1">新华出版社</option>
+                <option value="2">清华出版社</option>
+                <option value="3">北大出版社</option>
+             </select><br>
+    图书出版日期：<input type="date" name="t_date" value="{{ book.t_date | date:'Y-m-d' }}"><br>
+    图书是否上架：<input type="radio" name="t_updown" value="0">未上架
+                <input type="radio" name="t_updown" value="1">上架
+    <br>
+    <button>提交</button>
+</form>
+</body>
+<script>
+    function put() {
+            //复选框
+            var type_arr = document.getElementsByName("t_type")
+            var str = "{{ book.t_type }}"
+            for ( var i = 0; i < type_arr.length;i++){
+                if ( str.indexOf(type_arr[i].value) != -1){
+                    type_arr[i].checked = true
+                }
+            }
+
+            //下拉列表
+            var publisher_arr = document.getElementById("t_publisher").options
+            for ( var i = 0; i < type_arr.length;i++){
+                if ( publisher_arr[i].value == "{{ book.t_publisher }}"){
+                    publisher_arr[i].selected = true
+                }
+            }
+
+            //单选按钮
+            var updown_arr = document.getElementsByName("t_updown")
+            for ( var i = 0; i < updown_arr.length;i++){
+                if ( updown_arr[i].value == "{{ book.t_updown }}"){
+                    updown_arr[i].checked = true
+                }
+            }
+    }
+</script>
+</html>
