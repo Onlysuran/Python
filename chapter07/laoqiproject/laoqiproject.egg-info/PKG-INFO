@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: laoqiproject
+Version: 0.0.2
+Summary: You can listen to the speaking of programming language.
+Home-page: https://github.com/qiwsir/PythonCourse/tree/master/first/chapter07/laoqiproject
+Author: qiwsir
+Author-email: qiwsir@qq.com
+License: UNKNOWN
+Description: # Programming Language Speak
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
