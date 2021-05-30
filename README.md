@@ -20,24 +20,8 @@
 
 ![book](https://i.postimg.cc/nrRyxXQf/python.png)
 
-# 相关资源
-
 ### 个人博客：qiwsir.github.io
 
-### QQ群：26913719 
-
-（说明：此QQ群是读者交流，而非作者答疑区，请特别注意。如果读者有问题，可以在群里面跟其他读者交流。作者没有答疑的义务。）
-
-### 微信公众号：老齐教室
-
-在微信公众号中有专门的“python编程”专栏，汇总了很多有关python语言的好文章。
-
-本书在各大图书销售平台有售，出版社业已有电子版。
-
-- 电子工业出版社天猫旗舰店
-- 京东
-- 当当
-- 其他网店
 
 ![WechatIMG6](https://public-tuchuang.oss-cn-hangzhou.aliyuncs.com/WechatIMG6_20200109154827.jpeg)
 
