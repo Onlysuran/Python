@@ -12,8 +12,10 @@ class Book:
 def new_book():
     return "数据准备和特征工程"
 
-python = Book('suran')
-author_name = python.get_name()
-print(author_name)
-published = new_book()
-print(published)
+
+if __name__ == "__main__":
+    python = Book('suran')
+    author_name = python.get_name()
+    print(author_name)
+    published = new_book()
+    print(published)
