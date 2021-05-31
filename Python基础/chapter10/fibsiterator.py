@@ -1,5 +1,5 @@
 #condig:utf-8
-
+#装饰器函数
 class Fibs:
     def __init__(self,max):
         self.max = max
@@ -19,3 +19,16 @@ class Fibs:
 fibs = Fibs(1000000)
 lst = [fibs.__next__() for i in range(10)]
 print(lst)
+
+
+#生成器函数
+def fibs():
+    prev, curr = 0, 1
+    while True:
+        yield prev
+        prev, curr = curr, prev + curr 
+import itertools
+print(list(itertools.islice(fibs(), 10 )))
+
+gt = [x**2 for x in range(10)]
+print(gt)
